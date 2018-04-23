@@ -152,8 +152,11 @@
                 </select><br><br><br> -->
                
 
-                 <button type="submit" class="btn btn-primary submit">Submit</button><br><br>
+                 <button type="submit" data-target="myModal" class="btn btn-primary submit">Submit</button><br><br>
             </form>
+
+
+
 
              <div class='col s4'>
             <p><a href='/api/friends'>API Friends List</a> 
@@ -173,6 +176,8 @@
 
     $(".submit").on("click", function(event) {
       event.preventDefault();
+
+      var modal = document.getElementById('myModal');
 
       // Here we grab the form elements
       var newFriend = {
