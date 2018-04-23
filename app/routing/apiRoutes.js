@@ -29,10 +29,10 @@ module.exports = function(app) {
     var scoresArray = [];
     var match = 0;
 
-    //runs through all current friends in list
+  
     for(var i=0; i<friendsArray.length; i++){
       var totalDifference = 0;
-      //run through scores to compare friends
+      //compare friends
       for(var j=0; j<newScores.length; j++){
         totalDifference += (Math.abs(parseInt(friendsArray[i].scores[j]) - parseInt(newScores[j])));
       }
@@ -40,14 +40,14 @@ module.exports = function(app) {
       scoresArray.push(totalDifference);
     }
 
-    //after all friends are compared, find best match
+    //find match
     for(var i=0; i<scoresArray.length; i++){
       if(scoresArray[i] <= scoresArray[match]){
         match = i;
       }
     }
 
-    //return bestMatch data
+    //return match data
     var bff = friendsArray[match];
     res.json(bff);
 
