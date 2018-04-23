@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+
+     <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+       <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <title>Friend Finder - Survey</title>
+</head>
+
+<body>
+    <div class='container'><br><br>
+                <h1><strong>Tell Me About Yourself</strong></h1>
+                <br>
+                <input id="name" type="text" class="validate" required>
+                <label class='active' for="name">First Name (required)</label>
+
+                <br>
+                <input id="photo" type="text" class="validate" required>
+                <label class='active' for="name">Link to Photo Image (required)</label><br><br>
+                <h5><strong>Question 1</strong></h5>
+                <p>I see myself as extroverted, enthusiastic.</p>
+                
+
+                <select data-placeholder="" class="browser-default" id="q1">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br><br><br>
+
+<!-- 
+                <h5><strong>Question 2</strong></h5>
+                <p>I see myself as critical, quarrelsome.</p>
+                <select data-placeholder="" class="browser-default" id="q2">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br><br><br>
+
+
+                <h5><strong>Question 3</strong></h5>
+                <p>I see myself as dependable, self-disciplined.</p>
+                <select data-placeholder="" class="browser-default" id="q3">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br><br><br>
+
+
+                <h5><strong>Question 4</strong></h5>
+                <p>I see myself as anxious, easily upset.</p>
+                <select data-placeholder="" class="browser-default" id="q4">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br><br><br>
+
+
+                <h5><strong>Question 5</strong></h5>
+                <p>I see myself as open to new experiences.</p>
+                <select data-placeholder="" class="browser-default" id="q5">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br><br><br>
+
+
+                <h5><strong>Question 6</strong></h5>
+                <p>I see myself as reserved, quiet</p>
+                <select data-placeholder="" class="browser-default" id="q6">
+                    <option value="">Choose an Option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br><br><br>
+
+
+                <h5><strong>Question 7</strong></h5>
+                <p>I see myself as sympathetic.</p>
+                <select data-placeholder="" class="browser-default" id="q7">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br><br><br>
+
+
+                <h5><strong>Question 8</strong></h5>
+                <p>I see myself as disorganized.</p>
+                <select data-placeholder="" class="browser-default" id="q8">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br><br><br>
+
+
+                <h5><strong>Question 9</strong></h5>
+                <p>I see myself as calm, emotionally stable.</p>
+                <select data-placeholder="" class="browser-default" id="q9">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br><br><br>
+
+
+                <h5><strong>Question 10</strong></h5>
+                <p>I see myself as practical, conventional.</p>
+                <select data-placeholder="" class="browser-default" id="q10">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select><br><br><br> -->
+               
+
+                 <button type="submit" class="btn btn-primary submit">Submit</button><br><br>
+            </form>
+
+             <div class='col s4'>
+            <p><a href='/api/friends'>API Friends List</a> 
+        </div>
+         </div>  
+     </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+
+    $(".submit").on("click", function(event) {
+      event.preventDefault();
+
+      // Here we grab the form elements
+      var newFriend = {
+                name: $('#name').val().trim(),
+                photo: $('#photo').val().trim(),
+                scores: [
+                    $('#q1').val(),
+                    $('#q2').val(),
+                    $('#q3').val(),
+                    $('#q4').val(),
+                    $('#q5').val(),
+                    $('#q6').val(),
+                    $('#q7').val(),
+                    $('#q8').val(),
+                    $('#q9').val(),
+                    $('#q10').val(),
+                ]
+            };
+
+      console.log(newFriend);
+
+      // This line is the magic. It"s very similar to the standard ajax function we used.
+      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+      // depending on if a tables is available or not.
+
+      $.post("/api/friends", newFriend, function(data) {
+        console.log("Sent to Friends")
+
+
+          // // Clear the form when submitting
+          // $("#reserve-name").val("");
+          // $("#reserve-phone").val("");
+          // $("#reserve-email").val("");
+          // $("#reserve-unique-id").val("");
+
+        });
+
+    });
+
+</script>
