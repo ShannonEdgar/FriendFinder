@@ -26,30 +26,30 @@ module.exports = function(app) {
     // req.body is available since we're using the body-parser middleware
 
     var newScores = req.body.scores;
-    var scoresArray = [];
+    var scores = [];
     var match = 0;
 
   
     for(var i=0; i<friendsArray.length; i++){
       var totalDifference = 0;
-      //compare friends
-      for(var j=0; j<newScores.length; j++){
-        totalDifference += (Math.abs(parseInt(friendsArray[i].scores[j]) - parseInt(newScores[j])));
+      
+      for(var f=0; f<newScores.length; f++){
+        totalDifference += (Math.abs(parseInt(friendsArray[i].scores[f]) - parseInt(newScores[f])));
       }
 
-      scoresArray.push(totalDifference);
+      scores.push(totalDifference);
     }
 
-    //find match
-    for(var i=0; i<scoresArray.length; i++){
-      if(scoresArray[i] <= scoresArray[match]){
+  
+    for(var i=0; i<scores.length; i++){
+      if(scores[i] <= scores[match]){
         match = i;
       }
     }
 
-    //return match data
-    var bff = friendsArray[match];
-    res.json(bff);
+
+    var matchFriend = friendsArray[match];
+    res.json(matchFriend);
 
  
     friendsArray.push(req.body);
